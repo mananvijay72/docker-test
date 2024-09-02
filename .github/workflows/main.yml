@@ -1,4 +1,4 @@
-name: Python application
+name: test application
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "mananvijay" --password-stdin
-        docker image build -t mananvijay/pyflask:latest .
-        docker push mananvijay/pyflask:latest
+        docker image build -t mananvijay/test:latest .
+        docker push mananvijay/test:latest
